@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>月球地质写真集</title>
+    <link rel="icon" href="images/flags/logo.png" sizes="16x16" />
+    <link rel="stylesheet" href="css/dizhi.css" />
+    <script src="js/vue.js"></script>
+  </head>
+
+  <body>
+    <div class="box">
+      <div class="return">
+        <h5>
+          <a href="javascript:history.back(-1)" style="font-size: 20px">&lt; 返&nbsp;&nbsp;回</a>
+        </h5>
+      </div>
+    </div>    
+      <div id="app">
+        <div class="container">
+        <div id="slide">
+          <div class="item" style="background-image: url(images/dizhi1.png)">
+            <div class="content">
+              <div class="name">&nbsp;</div>
+              <div class="des">&nbsp;</div>
+            </div>
+          </div>
+          <div class="item" style="background-image: url(images/dizhi2.png)">
+            <div class="content">
+              <div class="name">&nbsp;</div>
+              <div class="des">&nbsp;</div>
+            </div>
+          </div>
+          <div class="item" style="background-image: url(images/dizhi3.png)">
+            <div class="content">
+              <div class="name">&nbsp;</div>
+              <div class="des">&nbsp;</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <div class="s_button" @click="lnextWord">&lt;</div>
+          <div class="s_button" @click="rnextWord">&gt;</div>
+        </div>
+      </div>
+      <div class="additional-content" >
+        <h2>{{ words[currentIndex] }}</h2>
+        <p><br></p>
+        <h3>世界首套！我国为月球绘制高清地质“写真集”</h3>   
+      
+        <div style="text-align: justify;">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;月球从未如此清晰！<span style="color: rgb(171,25,66); ">4月21日零时，世界首套高精度月球地质图集在京正式发布。</span>
+          这套图集由我国科研团队绘制，主要基于嫦娥工程科学探测数据，比例尺为1:250万，<span style="color: rgb(171,25,66); ">是目前精度最高的全月地质“写真集”。</span>
+        </p>
+          
+        <p>
+          &nbsp;&nbsp;&nbsp;&nbsp;月球表面的陨石坑什么样？月球上有哪些岩石和矿产？月球经历过怎样的地质活动？在这套“写真集”里，都可以直观地看到。
+        </p>
+
+
+        <p>
+          &nbsp;&nbsp;&nbsp;&nbsp;为什么要绘制这套“写真集”？月球是离我们最近的星体，千百年来，人类从未停止过对月球的探索。
+        随着美国阿波罗、苏联“月球”、中国“嫦娥”等探月活动的开展，人类对月球的认识水平前所未有地提升。
+        </p>
+
+
+        <p>
+          &nbsp;&nbsp;&nbsp;&nbsp;“月球地质图是月壳表层地质构造、岩浆活动、矿产分布等信息的综合表达，能够集中、直观地呈现人类对月球的观测、研究成果。”
+          中国科学院地球化学研究所研究员刘建忠介绍，绘制月球地质图，能够帮助人们更好地认识月球，也能为月球科研与探测，乃至月球基地建设提供有力支撑。
+        </p>
+
+
+        <p>
+          &nbsp;&nbsp;&nbsp;&nbsp;长期以来，国际上使用的月球地质图，主要是基于美国阿波罗计划获取的数据和资料。随着当前国际上月球探测研究的加速发展，这些月球地质图已明显滞后。
+        </p>
+
+        <p>
+          &nbsp;&nbsp;&nbsp;&nbsp;“这些地质图中，精度较高的只有局部图，覆盖全月的只有1:500万的比例尺精度。”刘建忠说，这些月球地质图的绘制年代较早，人类近几十年来的最新研究成果并没有得到充分体现。
+        </p>
+
+
+        <p>
+          &nbsp;&nbsp;&nbsp;&nbsp;有鉴于此，2012年，中国月球探测工程首任首席科学家欧阳自远院士提出开展新的月球地质图编研的设想。
+        </p>
+
+        <p>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(171,25,66); ">此后，来自中国科学院地球化学研究所、吉林大学、山东大学等多家单位的科研人员组成的编研团队“十余年磨一剑”，绘成了这套“写真集”。</span>
+        </p>
+
+
+        <p>
+          &nbsp;&nbsp;&nbsp;&nbsp;“编制月球地质图，需要月球起源演化理论的指导，也离不开现实观测数据的支撑。”刘建忠说，编研团队始终将地质编图与综合研究紧密结合。
+        </p>
+
+        <p>
+          &nbsp;&nbsp;&nbsp;&nbsp;编研团队创造性地建立了“三宙六纪”的月球地质年代划分方案，建立了以内、外动力地质演化为主线的月球构造和岩石类型分类体系，构建了月球撞击盆地和盆地建造亚类的分类体系，搭建起月球地质图的“骨架”。
+        </p>
+
+        <p>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(171,25,66); ">我国嫦娥工程科学探测数据则令月球地质图“血肉丰满”。“这些数据为我们区分月海与非月海区域、识别撞击坑物质、分析盆地构造等工作提供了支撑。”</span>刘建忠说。
+        </p>
+
+        <p>
+          &nbsp;&nbsp;&nbsp;&nbsp;这套“写真集”精度如何？
+          得益于嫦娥工程科学探测数据的高精度，这套“写真集”的比例尺为1:250万，<span style="color: rgb(171,25,66); ">精度达到此前月球全月地质图的约2倍。</span>
+        </p>
+
+        <p>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(171,25,66); ">这套图集包含一幅月球全月地质图（主图）、一幅全月岩石类型分布图、一幅月球构造纲要图和30幅月球标准分幅地质图。</span>
+        </p>
+
+        <p>
+          &nbsp;&nbsp;&nbsp;&nbsp;在主图上，可以看到全月12341个撞击坑、81个撞击盆地，辨别出17种岩石类型、14类构造。人类探测器着陆点、特殊高程点等一些特殊要素，在图集中也有显示。  
+        </p>
+
+        
+
+        <p><br></p>
+        <p><br></p>
+        </div>
+  
+
+    <!-- <script src="js/xiezhenji.js"></script> -->
+    <script>
+      new Vue({
+        el: "#app",
+        data: {
+          words: [
+            "月球地质图系统表达了月壳表面地层、构造、岩性和年代学等方面的综合地质信息，反映了月球岩浆作用、撞击事件、火山活动等演化过程。",
+            "月球岩石类型分布图为我们提供了对月球地质环境的整体了解，有助于指导未来的月球探测任务、资源利用以及对月球形成和演化过程的研究。",     
+            "月球构造纲要图是一种展示月球表面特征和地质构造的图表，它有助于科学家和研究人员理解月球的整体地质结构、地貌特征以及演化历史。",
+
+          ],
+          currentIndex: 0,
+        },
+        methods: {
+          rnextWord() {
+            this.currentIndex++;
+            if (this.currentIndex >= this.words.length) {
+              this.currentIndex = 0;
+            }
+            let lists = document.querySelectorAll('.item');
+    document.querySelector('#slide').prepend(lists[lists.length - 1]);console.log(currentIndex);
+          },
+          lnextWord() {
+            this.currentIndex--;
+            if (this.currentIndex < 0) {
+              this.currentIndex = 2;
+            }
+            let lists = document.querySelectorAll('.item');
+    document.querySelector('#slide').appendChild(lists[0]);console.log(currentIndex);
+          },
+
+        },
+      });
+    </script>
+  </body>
+</html>

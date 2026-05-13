@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>知识科普</title>
+    <link rel="icon" href="images/flags/logo.png" sizes="16x16" />
+    <script src="js/KepuIndex.js" defer></script>
+    <style>
+      /* 样式代码 */
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .shell {
+        height: 100vh;
+        overflow-x: hidden;
+        perspective: 2px;
+      }
+      .shell div {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-style: 30px;
+        letter-spacing: 2px;
+      }
+      .heading h1 {
+        font-family: "华文中宋", Arial, sans-serif;
+        font-size: 24px;
+        font-weight: bold;
+      }
+      body {
+        overflow-y: hidden;
+      }
+      .image {
+        transform: translateZ(-1px) scale(1.6);
+        background-size: cover;
+        height: 100vh;
+        z-index: -1;
+      }
+      .text {
+        height: 50vh;
+        background-color: #fff;
+        font-family: "宋体", Arial, sans-serif;
+      }
+      .text h1 {
+        color: #000;
+      }
+      .text h1 a {
+        color: #000;
+        text-decoration: none;
+      }
+      .text h1 a:hover {
+        text-decoration: underline;
+      }
+      .heading {
+        z-index: -1;
+        transform: translateY(-30vh) translateZ(1px);
+        color: #fff;
+        font-size: 30px;
+      }
+      .box {
+        position: top;
+      }
+      .box .return {
+        position: fixed;
+        z-index: 1;
+        top: 20px;
+        left: 2%;
+      }
+      .box .return h5 {
+        font-size: 0.2rem;
+      }
+      .box .return h5 a {
+        color: #fff;
+        text-decoration: none;
+        border-bottom: 2px solid transparent;
+        transition: border-color 0.3s ease;
+      }
+      .box .return h5:hover a {
+        border-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="return">
+        <h5>
+          <a href="javascript:history.back(-1)" style="font-size: 20px"
+            >&lt; 返&nbsp;&nbsp;回</a
+          >
+        </h5>
+      </div>
+    </div>
+
+    <div class="shell">
+      <div
+        class="image"
+        style="background-image: url('./images/water.jpg')"
+      ></div>
+      <div class="heading">
+        <h1>月球发现分子水</h1>
+      </div>
+      <div class="text">
+        <h1>
+          <li>
+            <a href="./tanyueqi.html">探月器集锦</a>
+          </li>
+        </h1>
+      </div>
+
+      <div
+        class="image"
+        style="background-image: url('./images/earth.jpg')"
+      ></div>
+      <div class="heading">
+        <h1>人 与 月 球</h1>
+      </div>
+      <div class="text">
+        <h1>
+          <li>
+            <a href="dizhi.html">月球地质“写真集”</a>
+          </li>
+        </h1>
+      </div>
+
+      <div
+        class="image"
+        style="background-image: url('./images/yuexiang.jpg')"
+      ></div>
+      <div class="heading">
+        <h1>月 相</h1>
+      </div>
+      <div class="text">
+        <h1>
+          <li>
+            <a href="./yuexiang.html">2024全年月相预测 </a>
+          </li>
+        </h1>
+      </div>
+
+      <div class="image" style="background-image: url('./images/22.jpg')"></div>
+      <div class="heading">
+        <h1>月 球 的 奥 秘</h1>
+      </div>
+      <div class="text">
+        <h1><a href="index.html">返回主页</a></h1>
+      </div>
+    </div>
+  </body>
+</html>

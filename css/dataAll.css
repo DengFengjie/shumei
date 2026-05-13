@@ -1,0 +1,498 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0; /* 去除默认的边距 */
+  padding: 0; /* 去除默认的内边距 */
+}
+
+/* 声明字体*/
+body {
+  background: url(../images/1.png) no-repeat top center;
+  line-height: 1.15;
+  color: rgba(45, 45, 83);
+  background-size: cover; /* 将背景图像调整为覆盖整个元素 */
+}
+
+
+.songti {
+  font-family: 黑体, SimSun, sans-serif;
+}
+
+
+header {
+  position: relative;
+  height: 1.25rem;
+  background: url(../images/lead.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+body header h1 {
+  font-family: STZhongsong;
+  font-size: 0.475rem;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1rem;
+  font-weight: 700;
+}
+
+
+header .showTime {
+  position: absolute;
+  right: 2.000rem; /* 将 right 属性的值增加一点 */
+  top: .25rem;
+  line-height: 0.9375rem;
+  color: #ffffff;
+  font-size: 0.25rem;
+}
+
+
+/* 页面主体盒子 */
+.mainbox {
+  display: flex;
+  min-width: 1024px;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0.125rem 0.125rem 0;
+}
+
+.mainbox .column1 {
+  flex: 3;
+  margin: 0 0.125rem 0.1875rem;
+
+}
+
+.mainbox .column2 {
+  flex: 5;
+  margin: 0 0.125rem 0.1875rem;
+
+}
+
+.mainbox .column3 {
+  flex: 3;
+  /* width: 3.5rem; */
+  /* height: 3.875rem; */
+  margin: 0 0.125rem 0.1875rem;
+  /* overflow: hidden; */
+}
+
+/* 左边排版 */
+.mainbox .panel {
+  position: relative;
+  height: 3.875rem;
+  padding: 0 0.1875rem 0.5rem;
+  /*border: 1px solid rgba(25, 186, 139, 0.17);*/
+  margin-bottom: 0.1875rem;
+  background: url(../images/line\(1\).png) rgba(255, 255, 255, 0.03);
+}
+
+.mainbox .panel::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 100px;
+  border-left: 2px solid #ffffff;
+  border-top: 2px solid #ffffff;
+  content: "";
+
+}
+
+.mainbox .panel::after {
+  position: absolute;
+  top: 0;
+  right: 50px;
+  width: 100px;
+  border-right: 2px solid #ffffff;
+  border-top: 2px solid #ffffff;
+  content: "";
+}
+
+.mainbox .panel .panel-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.mainbox .panel .panel-footer::before {
+  position: absolute;
+  left: 50px;
+  bottom: 0;
+  width: 100px;
+  border-left: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  content: "";
+}
+
+.mainbox .panel .panel-footer::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 30px;
+  height: 100px;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  content: "";
+}
+
+.mainbox .panel h2 {
+  height: 0.6rem;
+  color: #ffffff;
+  line-height: 0.6rem;
+  text-align: center;
+  font-size: 0.25rem;
+  font-weight: 700;
+}
+
+.mainbox .panel ul {
+  /* 盒子的高度 */
+  height: .25rem;
+  /* color: #b1a96b; */
+  /* 年份的高度 */
+  line-height: .1875rem;
+  text-align: center;
+  /* font-size: .125rem;
+  font-weight: 400; */
+}
+
+.mainbox .panel ul .year5-link,
+.mainbox .panel ul .year2-link,
+.mainbox .panel ul .year1-link{
+  background-color: transparent;
+  border: transparent;
+  font-size: 0.20rem;
+  font-weight: 600;
+  color: #5f5138;
+  text-decoration: none;
+  margin: 0 .0125rem;
+}
+
+.mainbox .panel ul .year5-link:focus,
+.mainbox .panel ul .year2-link:focus,
+.mainbox .panel ul .year1-link:focus{
+  color: #52ef86;
+}
+
+.mainbox .panel .chart {
+  height: 3rem;
+}
+
+.mainbox .column2 .map3d {
+  display: flex;
+  justify-content: center;
+  /* border: 2px solid red; */
+}
+
+.mainbox .column2 .map3d a {
+  font-size: 20px;
+  color: rgb(240, 236, 236);
+}
+
+.mainbox .column2 .map3d a:hover {
+  color: rgb(228, 220, 220);
+}
+
+
+/* 右边排版 */
+.mainbox .panel2 {
+  position: relative;
+  height: 5.8125rem;
+  padding: 0 0.1875rem 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.17);
+  margin-bottom: 0.1875rem;
+  background: url(../images/line\(1\).png) rgba(255, 255, 255, 0.03);
+}
+
+
+.mainbox .panel2::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 100px;
+  border-left: 2px solid #f4f3f2;
+  border-top: 2px solid #f4f3f2;
+  content: "";
+
+}
+
+.mainbox .panel2::after {    
+  position: absolute;
+  top: 0;
+  right: 50px;
+  width: 100px;
+  border-right: 2px solid #f4f3f2;
+  border-top: 2px solid #f4f3f2;
+  content: "";
+}
+
+.mainbox .panel2 .panel2-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.mainbox .panel2 .panel2-footer::before {
+  position: absolute;
+  left: 50px;
+  bottom: 0;
+  width: 100px;
+  border-left: 2px solid #f4f3f2;
+  border-bottom: 2px solid #f2f0ec;
+  content: "";
+}
+
+.mainbox .panel2 .panel2-footer::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 30px;
+  height: 100px;
+  border-right: 2px solid #f4f3f2;
+  border-bottom: 2px solid #f4f3f2;
+  content: "";
+}
+
+.mainbox .panel2 h2 {
+  height: 0.6rem;
+  line-height: 0.6rem;
+  text-align: center;
+  font-size: 0.25rem;
+  font-weight: 600;
+  color: #f4f3f2;
+  margin: 0 .0125rem;
+}
+
+.mainbox .panel2 ul {
+  /* 盒子的高度 */
+  height: .375rem;
+  /* color: #b1a96b; */
+  /* 年份的高度 */
+  line-height: .1875rem;
+  text-align: center;
+  /* font-size: .125rem;
+  font-weight: 400; */
+}
+
+.mainbox .panel2 h2 ul a {
+  color: #f4f3f2;
+  text-decoration: none;
+  margin: 0 .0125rem;
+  /* 年份之间的间距 */
+  font-size: .1875rem;
+}
+
+.mainbox .panel2 .chart {
+  height: 5rem;
+}
+
+.map3d a {
+  margin-top: -15px; /* 负值表示向上移动 */
+}
+.no {
+  background: rgba(254, 254, 255, 0);
+  padding: 0.1875rem;
+}
+
+.no .no-hd {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+.no .no-hd::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100px;
+  height: 30px;
+  border-top: 2px solid #f4f3f2;
+  border-left: 2px solid #f4f3f2;
+}
+
+.no .no-hd::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  content: "";
+  width: 100px;
+  height: 30px;
+  border-right: 2px solid #f4f3f2;
+  border-bottom: 2px solid #f4f3f2;
+}
+
+.no .no-hd ul {
+  display: flex;
+}
+
+.no .no-hd ul li {
+  position: relative;
+  flex: 1;
+  line-height: 1rem;
+  font-size: 0.875rem;
+  color: #f4f3f2;
+  text-align: center;
+  font-family: "electronicFont";
+}
+
+.no .no-hd ul li::after {
+  content: "";
+  position: absolute;
+  top: 25%;
+  right: 0;
+  height: 50%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.no .no-bd ul {
+  display: flex;
+}
+
+.no .no-bd ul li {
+  flex: 1;
+  text-align: center;
+  color: #f4f3f2;
+  font-size: 0.225rem;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  padding-top: 0.125rem;
+}
+
+.map {
+  position: relative;
+  height: 10.125rem;
+}
+
+
+
+/*月球转*/
+.map .map1 {
+  width: 7.475rem;
+  height: 7.475rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url(../images/2.png);
+  background-size: 100% 100%;
+  opacity: 1;
+  filter: brightness(1.5);
+  animation: rotateAnimation 20s linear infinite; /* 将持续时间增加到 20 秒 */
+}
+
+@keyframes rotateAnimation {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/*中间蓝色旋转*/
+/*.map .map2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8.0375rem;
+  height: 8.0375rem;
+  background: url(../images/jt.png);
+  animation: rotate1 10s linear infinite;
+  opacity:0.8;
+  background-size: 100% 100%;
+}*/
+
+/*探测器绕着转*/
+.map .map3 {
+  position: absolute;
+  top: 40%; 
+  left: 40%; 
+  transform: translate(-50%, -50%);
+  width: 6.875rem;
+  height: 6.875rem;
+  background: url(../images/tanceqi.png);
+  animation: rotate2 25s ease-in-out infinite; 
+  opacity: 1;
+  background-size: 100% 100%;
+} 
+
+
+
+.map .chart2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10.125rem;
+}
+
+@keyframes rotate1 {
+  form {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+@keyframes rotate2 {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+
+/* 约束屏幕尺寸 */
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 42px !important;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  html {
+    font-size: 80px !important;
+  }
+}
+
+#parent {
+  font-family: 微软雅黑, sans-serif;
+}
+
+
+/* 样式化链接按钮 */
+.box {
+  position: top;
+}
+.box .return {
+  position: fixed; /* 使返回键固定定位 */
+  z-index: 1;
+  top: 20px;
+  left: 2%;
+}
+.box .return h5 {
+  font-size: 0.2rem;
+}
+.box .return h5 a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+.box .return h5:hover a {
+  border-color: #fff;
+}

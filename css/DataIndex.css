@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    background-size: 100% 100%;
+}
+
+.box {
+    position: relative;
+}
+
+.blue-text {
+    color: #007bff;
+}
+
+.box .return{
+    position:absolute;
+    z-index: 1;
+    top: 10px;
+    left: 2%;
+}
+
+.box .return h5{
+    font-size: 0.2rem;
+}
+
+.box .return h5 a{
+    color: #fff;
+}
+
+.box .return h5:hover{
+    border-bottom:2px solid #fff ;
+}
+
+
+
+.box .no .item h3 {
+    vertical-align: bottom;
+}
+
+.box .data-link {
+    width: 4rem;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    bottom: 2%;
+    right: 5%;
+}
+
+.box .data-link-hd {
+    width: 100%;
+    color: #fff;
+    font-size: 0.7rem;
+    /* border: 1px solid red; */
+    text-align: center;
+}
+
+.box .data-link-hd h6 {
+    text-align: center;
+}
+
+
+
+.box .data-link-bd li {
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: none;
+    border: 2px solid #fff;
+    margin: 0.3rem 0;
+    /* padding: 0.15rem 0; */
+    /* border: 1px solid red; */
+    border-radius: 20px;
+
+}
+
+.box .data-link-bd a {
+    /* display: block; */
+    color: #fff;
+    font-size: 0.3rem;
+    font-weight: 800;
+    text-shadow: 1px 1px 4px #666;
+}
+
+.box .data-link-bd li:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.box .data-link-bd a:hover {
+    display: block;
+    width: 100%;
+    color: #000;
+}
+
+.box .no {
+    position: absolute;
+    z-index: 1;
+    top: 35%; /* 调整 top 值来向下移动 */
+    left: 2%;
+    padding: 20px; /* 增加内边距 */
+    color: #fff;
+    font-size: 1rem;
+    text-shadow: 10px 10px 20px #000;
+}
+
+.box .no .no-bd {
+    color: #fff;
+    font-size: 1rem;
+}
+
+.box .no .item {
+    display: flex;
+    align-items: center; /* 垂直居中对齐子元素 */
+    text-shadow: 10px 10px 20px #000;
+}
+
+.box .no ul li h5 {
+    font-family: '楷体', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    color: #e4dede;
+}
+
+.box .no ul li h3 {
+    font-family: 'Verdana', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    color: #007BFF;
+}
+
+/* 贴图选择器样式 */
+.texture-selector {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 100;
+}
+
+.texture-selector label {
+    color: white;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+/* 美化选择框样式 */
+.texture-selector select {
+    padding: 8px 12px;
+    font-size: 16px;
+    background-color: #444; /* 深灰色背景，现代风格 */
+    color: white; /* 白色字体 */
+    border: 2px solid #888; /* 灰色边框 */
+    border-radius: 8px; /* 圆角边框 */
+    outline: none; /* 移除默认的选中边框 */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 添加轻微阴影 */
+    transition: all 0.3s ease; /* 添加平滑的过渡效果 */
+}
+
+/* 悬停时的效果 */
+.texture-selector select:hover {
+    background-color: #555; /* 悬停时背景变为稍微亮一些的灰色 */
+    border-color: #fff; /* 边框变为白色 */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15); /* 增强阴影效果 */
+    cursor: pointer;
+}
+
+/* 当选择框获得焦点时（点击） */
+.texture-selector select:focus {
+    border-color: #00aaff; /* 聚焦时的边框颜色变为蓝色 */
+    box-shadow: 0px 0px 8px rgba(0, 170, 255, 0.5); /* 蓝色光晕效果 */
+}
+
+/* 选项样式 */
+.texture-selector select option {
+    background-color: #333; /* 选项背景色 */
+    color: white; /* 选项文字颜色 */
+}
+
+/* 鼠标悬停时的选项效果 */
+.texture-selector select option:hover {
+    background-color: #444;
+}

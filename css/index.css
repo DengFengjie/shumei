@@ -1,0 +1,195 @@
+@charset "utf-8";
+
+/* CSS Document */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /* 禁止滚动条出现 */
+}
+
+.showcase {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #000;
+  color: #fff;
+  z-index: 2;
+  transition: 0.5s;
+}
+
+.showcase.active {
+  right: 300px;
+}
+
+.showcase header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.showcase video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity:1;   /*视频亮度*/
+  object-fit: cover;
+}
+
+.logo {
+  width: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.logo h2 {
+  white-space: nowrap;
+  margin-left: 10px;
+}
+
+.logo img {
+  width: 100%;
+  filter: brightness(200%);
+}
+
+/* .text {
+  position: relative;
+  z-index: 10;
+}
+
+.text h2 {
+  font-size: 4em;
+  font-weight: 700;
+  line-height: 1em;
+  text-transform: uppercase;
+  font-family: "华文中宋", Arial, sans-serif;
+}
+
+.text h3 {
+  font-size: 3em;
+  font-weight: 600;
+  line-height: 1em;
+  text-transform: uppercase;
+  font-family: "华文中宋", Arial, sans-serif;
+}
+
+.text p {
+  font-size: 1.1em;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
+  font-family: "宋体", Arial, sans-serif;
+} */
+
+.access {
+  position: fixed;
+  bottom: 10%; 
+  left: 50%; /* 按钮左侧距离页面左侧50%的位置，以实现水平居中 */
+  transform: translateX(-50%); /* 使用 transform 属性将按钮向左移动自身宽度的50%，以确保按钮完全居中 */
+  display: inline-block;
+  font-size: 1.1em; /* 调整字体大小 */
+  background: #fff;
+  padding: 13px 20px; /* 调整按钮内边距，使其变小 */
+  text-decoration: none;
+  color: #111;
+  margin: 0; /* 移除外边距 */
+  border: none; /* 去掉边框 */
+  outline: none; /* 去掉焦点轮廓 */
+  max-width: 200px; /* 设置按钮的最大宽度 */
+  min-width: 80px; /* 设置按钮的最小宽度 */
+  border-radius: 5px; /* 圆角效果 */
+  text-align: center; /* 文字居中 */
+  /* transition: background-color 0.2s, transform 0.2s;  */
+}
+
+.access:hover {
+  background: transparent; /* 鼠标悬停时背景变为透明 */
+  color: #fff;
+
+}
+
+/* .text a:hover {
+  letter-spacing: 6px;
+} */
+
+.menu {
+  position: absolute;
+  /* 将菜单位置设为绝对定位 */
+  top: 30px;
+  /* 根据需要调整菜单距顶部的距离 */
+  right: 20px;
+  /* 根据需要调整菜单距右侧的距离 */
+  width: 300px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.menu ul li {
+  margin-bottom: 20px;
+  /* 增加间隔 */
+}
+
+.menu ul li:last-child {
+  margin-bottom: 0;
+  /* 最后一个导航栏不需要底部间隔 */
+}
+
+.menu ul li a {
+  text-decoration: none;
+  font-size: 24px;
+  color: #111;
+}
+
+.menu ul li a:hover {
+  color: lightblue;
+}
+
+@media(max-width: 991px) {
+
+  .showcase,
+  .showcase header {
+    padding: 40px;
+  }
+
+  .text h2 {
+    font-size: 3em;
+  }
+
+  .text h3 {
+    font-size: 2em;
+  }
+}
+
+
+
+
+
+

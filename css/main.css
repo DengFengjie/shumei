@@ -1,0 +1,127 @@
+/* 重置所有元素的默认样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* 设置默认字体为 Poppins */
+}
+
+/* 设置 body 元素的基础样式 */
+body {
+    position: relative;
+}
+
+/* 设置 header 元素的样式 */
+body .header {
+    position: absolute;
+    top: 10%; /* 设置 header 元素距离顶部 10% 的位置 */
+    text-align: center; /* 文本居中 */
+}
+
+/* 设置 header 中 h2 元素的样式，用于显示大标题 */
+body .header h2 {
+    font-family: "华文行楷"; /* 使用华文行楷字体 */
+    font-size: 100px; /* 字体大小为 100px */
+    font-weight: 600; /* 字体粗细 */
+    color: rgb(220,221,215); /* 字体颜色 */
+    text-shadow: 2px 2px 10px rgba(224, 215, 91, 0.5); /* 添加文本阴影 */
+    padding: 20px 0; /* 上下内边距为 20px */
+}
+
+/* 设置 header 中 p 元素的样式，用于显示副标题 */
+body .header p {
+    color: #c0bcb8; /* 字体颜色 */
+    font-weight: 600; /* 字体粗细 */
+    font-family: "Lucida Calligraphy"; /* 使用 Lucida Calligraphy 字体 */
+    font-style: italic; /* 字体风格为斜体 */
+}
+
+/* 设置 container 元素的样式，用于背景图片和布局 */
+.container {
+    background: url(../images/human.jpg) no-repeat center; /* 设置背景图片 */
+    background-size: cover; /* 背景图片尺寸覆盖整个容器 */
+    width: 100%; /* 容器宽度为视口宽度 */
+    height: 100vh; /* 容器高度为视口高度 */
+    display: flex; /* 使用 Flexbox 布局 */
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+}
+
+/* 设置导航菜单的基本样式 */
+nav {
+    background: rgba(255, 255, 255, 0.1); /* 背景颜色为半透明 */
+    padding: 15px 30px; /* 上下内边距为 15px，左右内边距为 30px */
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px); /* 背景模糊效果 */
+}
+
+/* 设置导航菜单中列表项的样式 */
+nav ul {
+    list-style: none; /* 移除列表项的默认样式 */
+    display: flex;
+    gap: 20px; /* 列表项之间的间隔 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+}
+
+/* 设置导航菜单中列表项的样式 */
+nav ul li {
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff; /* 字体颜色为白色 */
+    position: relative; /* 定位方式为相对定位 */
+    transition: color 0.3s ease; /* 字体颜色变化动画 */
+}
+
+/* 设置导航菜单中列表项悬停时的样式 */
+nav ul li:hover {
+    color: rgb(255, 255, 255); /* 悬停时字体颜色为白色 */
+}
+
+/* 设置导航菜单中列表项的链接样式 */
+nav ul li a {
+    text-decoration: none; /* 移除下划线 */
+    color: inherit; /* 继承父元素的颜色 */
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* 背景颜色变化动画 */
+}
+
+/* 设置导航菜单中列表项的链接悬停样式 */
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* 悬停时背景颜色 */
+}
+
+/* 响应式布局：屏幕宽度小于 768px 时的样式 */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* 导航菜单变为垂直排列 */
+        align-items: flex-start; /* 列表项靠左对齐 */
+    }
+}
+
+/* 设置返回按钮的样式 */
+.box {
+    position: top;
+}
+.box .return {
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    left: 2%;
+}
+.box .return h5 {
+    font-size: 0.2rem;
+}
+.box .return h5 a {
+    color: #fff; /* 字体颜色为白色 */
+    text-decoration: none; /* 移除下划线 */
+    border-bottom: 2px solid transparent; /* 底部边框为透明 */
+    transition: border-color 0.3s ease; /* 边框颜色变化动画 */
+}
+.box .return h5:hover a {
+    border-color: #fff; /* 悬停时底部边框颜色为白色 */
+}

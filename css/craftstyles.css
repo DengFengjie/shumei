@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2; /* 背景颜色 */
+    background-image: url(../images/blacksky.jpg);
+    background-size: cover; /* 图像覆盖整个页面 */
+    background-position: center; /* 图像在页面中居中显示 */
+    background-attachment: fixed; /* 固定背景图像 */
+}
+
+header {
+    background-color: rgba(0, 59, 134,0);
+    text-align: center;
+    padding: 20px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 添加阴影效果 */
+}
+
+main, footer {
+    padding: 20px;
+}
+
+h1, h2 {
+    font-family:'modern_no._20regular',
+    serif;
+    color: #fff; /* 字体颜色为白色 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 添加阴影效果 */
+}
+
+p, ul, li {
+
+    color: #fff; /* 字体颜色为白色 */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* 添加阴影效果 */
+}
+
+/* 其他 CSS 样式保持不变 */
+
+header h1 {
+    font-family:'modern_no._20regular',
+    serif;
+    margin: 0;
+}
+
+header p {
+    margin: 5px 0 0;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #FFFFFF;
+}
+
+ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.text {
+    color: #ffffff;
+    flex: 1 1 50%;
+    margin-right: 20px;
+}
+
+.image {
+    flex: 1 1 45%;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: #1e4898;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* 样式化链接按钮 */
+.box {
+    position: top;
+}
+.box .return {
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    left: 2%;
+}
+.box .return h5 {
+    font-size: 0.2rem;
+}
+.box .return h5 a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+.box .return h5:hover a {
+    border-color: #fff;
+}

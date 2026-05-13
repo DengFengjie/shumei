@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>探月数据展示</title>
+    <link rel="icon" href="images/flags/logo.png" sizes="16x16" />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="css/DataIndex.css" />
+    <link rel="stylesheet" href="./css/animate.min.css" />
+
+    <script src="js/flexible.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/echarts-gl.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/highcharts.js"></script>
+    <script src="js/highcharts-3d.js"></script>
+    <script src="js/exporting.js"></script>
+    <script src="js/DiJson.js"></script>
+    <script src="js/DataIndex.js"></script>
+  </head>
+
+  <body>
+    <div class="box">
+      <!-- 返回首页 -->
+      <div class="return">
+        <h5>
+          <a href="./main.html" style="font-size: 20px">&lt;返&nbsp;&nbsp;回</a>
+        </h5>
+      </div>
+      <div class="no">
+        <div class="no-bd">
+          <ul>
+            <li class="item">
+              <h5 class="animate__animated animate__fadeIn">
+                世界各国探月总数
+              </h5>
+              <h3 class="animate__animated animate__bounceInDown">127</h3>
+              <h5 class="animate__animated animate__fadeIn">次</h5>
+            </li>
+            <li class="item">
+              <h5 class="animate__animated animate__fadeIn">
+                中国探月工程发射计划
+              </h5>
+              <h3 class="animate__animated animate__bounceInDown">8</h3>
+              <h5 class="animate__animated animate__fadeIn">个</h5>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- 探月数据快速通道 -->
+      <div class="data-link">
+        <div class="data-link-hd">
+          <h6>嫦娥奔月 梦的实践</h6>
+        </div>
+        <ul class="data-link-bd">
+          <li><a href="craftindex.html">中国探测器任务</a></li>
+          <li><a href="ProjectBackground.html">中国探月历程</a></li>
+        </ul>
+      </div>
+
+      <!-- 地图模块 -->
+        <div
+          id="globe3D"
+          style="width: 100%; height: 100dvb">
+        </div>
+        
+      <!--切换贴图-->
+      <div class="texture-selector">
+        <label for="texture">选择月球纹理模型:</label>
+        <select id="texture">
+          <option value="./images/月球表面彩色山体阴影.jpg">
+            彩色山体阴影模型
+          </option>
+          <option value="./images/月球表面坡度.jpg">表面坡度模型</option>
+          <option value="./images/月球表面温度.jpg">表面温度模型</option>
+          <option value="./images/月球地质.jpg">地质模型</option>
+          <option value="./images/月球最小亮度温度异常.jpg">
+            温度异常模型
+          </option>
+          <option value="./images/LROC月球灰度.jpg">LROC灰度模型</option>
+        </select>
+      </div>
+    </div>
+  </body>
+</html>

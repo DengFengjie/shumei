@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>探测器集锦</title>
+    <link rel="icon" href="images/flags/logo.png" sizes="16x16" />
+    <style>
+      /* CSS部分 */
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-image: url("./images/blacksky.jpg");
+        background-size: cover; /* 使背景图片覆盖整个屏幕 */
+        overflow: hidden;
+        height: 100vh;
+      }
+
+      /*body {
+        background-image: linear-gradient(
+          -225deg,
+          #a1a1a0 0%,
+          #faffff 48%,
+          #7b7f7f 100%
+        );
+        overflow: hidden;
+        height: 100vh;
+      }*/
+
+      /* 设置滚动条 */
+      /*::-webkit-scrollbar {
+        width: 1px;
+        height: 1px;
+      }*/
+
+      .images img {
+        border: #fff solid 10px;
+        max-width: 45vh;
+        max-height: 50vh;
+        transition: 0.5s;
+      }
+
+      .images:hover img {
+        box-shadow: 0 10px 30px #86c4f7;
+        transform: scale(1.05);
+      }
+
+      /* 创建一个水平滚动的包裹容器，用于展示内容 */
+      .shell {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vh;
+        /*旋转90度，向上平移一个视口高度的距离 */
+        transform: rotate(-90deg) translate3d(0, -100vh, 0);
+        /* 设置变换的原点为右上角 */
+        transform-origin: right top;
+        overflow-x: hidden;
+        height: 100vw;
+        /* 设置3D透视效果 */
+        perspective: 1px;
+        transform-style: preserve-3d;
+      }
+
+      /* 创建一个图片容器，用于展示图片 */
+      .images {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* 设置最小高度为视口高度的40% */
+        min-height: 40vh;
+        /* 设置变换的原点为中心点 */
+        transform-origin: 50% 50%;
+        /* 旋转90度，向前平移0.1px，放大1.1倍，向右平移0px，向下平移2vh */
+        transform: rotate(90deg) translateZ(0.1px) scale(1.1) translateX(0px)
+          translateY(2vh);
+        transition: 1s;
+      }
+
+      .slower {
+        transform: rotate(90deg) translateZ(-0.12px) scale(1.3) translateX(0%)
+          translateY(-8vh);
+      }
+
+      .slower1 {
+        transform: rotate(90deg) translateZ(-0.25px) scale(1.35) translateX(0%)
+          translateY(2vh);
+      }
+
+      .slower-down {
+        transform: rotate(90deg) translateZ(-0.1px) scale(1) translateX(0%)
+          translateY(16vh);
+      }
+
+      .faster {
+        transform: rotate(90deg) translateZ(-0.05px) scale(1.1) translateX(0%)
+          translateY(15vh);
+      }
+
+      .faster1 {
+        transform: rotate(90deg) translateZ(0.05px) scale(1.4) translateX(0%)
+          translateY(10vh);
+      }
+
+      .fastest {
+        transform: rotate(90deg) translateZ(0.22px) scale(0.7) translateX(-10vh)
+          translateY(-15vh);
+      }
+
+      .vertical {
+        transform: rotate(90deg) translateZ(-0.1px) scale(1.6) translateX(0%)
+          translateY(-3vh);
+      }
+      /* 样式化链接按钮 */
+      .box {
+        position: relative;
+      }
+      .box .return {
+        position: absolute;
+        z-index: 1;
+        top: 20px;
+        left: 2%;
+      }
+      .box .return h5 {
+        font-size: 0.2rem;
+      }
+      .box .return h5 a {
+        color: #fff;
+        text-decoration: none;
+        border-bottom: 2px solid transparent;
+        transition: border-color 0.3s ease;
+      }
+      .box .return h5:hover a {
+        border-color: #fff;
+      }
+    </style>
+  </head>
+  <!-- HTML部分 -->
+
+  <body>
+    <!-- 添加链接按钮 -->
+    <div class="box">
+      <div class="return">
+        <h5>
+          <a href="javascript:history.back(-1)" style="font-size: 20px"
+            >&lt; 返&nbsp;&nbsp;回</a
+          >
+        </h5>
+      </div>
+    </div>
+    <div class="shell">
+      <div class="images slower">
+        <img src="./images/1tyq.gif" />
+      </div>
+      <div class="images faster">
+        <img src="./images/6tyq.png" />
+      </div>
+      <div class="images vertical">
+        <img src="./images/img401.jpg" />
+      </div>
+      <div class="images slower-down">
+        <img src="./images/img5.jpg" />
+      </div>
+      <div class="images">
+        <img src="./images/4tyq.jpg" />
+      </div>
+      <div class="images slower">
+        <img src="./images/3tyq.gif" />
+      </div>
+      <div class="images faster1">
+        <img src="./images/8tyq.jpg" />
+      </div>
+      <div class="images slower1">
+        <img src="./images/7tyq.jpg" />
+      </div>
+      <div class="images">
+        <img src="./images/2tyq.gif" />
+      </div>
+      <div class="images slower">
+        <img src="./images/img1.jpg" />
+      </div>
+      <div class="images faster">
+        <img src="./images/5tyq.jpg" />
+      </div>
+    </div>
+  </body>
+</html>

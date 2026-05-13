@@ -1,0 +1,98 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap'); */
+@import './google-fonts.css';
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  overflow: hidden;
+}
+video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  color: #fff;
+  text-align: center;
+}
+
+header h1 {
+  font-weight: 500;
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+header h1 span {
+  font-weight: 800;
+  font-size: 7rem;
+  display: block;
+}
+
+.description {
+  position: absolute;
+  bottom: 2%;
+  width: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #000;
+  color: #fff;
+  opacity: .7;
+  border-radius: 20px;
+  padding: 1.5rem;
+}
+
+.description p {
+  text-align: justify;
+  max-width: 42rem;
+  margin-inline: auto;
+  line-height: 1.5;
+}
+
+.description p.copyright {
+  font-size: .65rem;
+}
+
+.description a {
+  color: #fff;
+  text-underline-offset: 1.8px;
+}
+
+@media screen and (max-width: 1200px) {
+  .description {
+    position: absolute;
+    width: 91vw;
+    bottom: 0;
+    border-radius: 20px 20px 0 0;
+    margin: auto;
+    padding: .6rem 1.5rem;
+  }
+}
+/* 样式化链接按钮 */
+.box {
+  position: relative;
+}
+.box .return {
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  left: 2%;
+}
+.box .return h5 {
+  font-size: 0.2rem;
+}
+.box .return h5 a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+.box .return h5:hover a {
+  border-color: #fff;
+}

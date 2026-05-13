@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>中国月球探测工程——数据可视化平台</title>
+    <link rel="icon" href="images/flags/logo.png" sizes="16x16" />
+    <link rel="stylesheet" href="css/dataAll.css" />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="css/DataIndex.css" />
+
+    <!-- 统一使用CDN资源确保版本兼容 -->
+    <script src="js/flexible.js"></script>
+    <!-- 使用官方CDN确保版本兼容 -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts-gl@2.0.9/dist/echarts-gl.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/world.js"></script>
+    <script src="js/DiJson.js"></script>
+    <script src="js/DataIndex.js"></script>
+    <script src="js/dataAll.js"></script>
+  </head>
+
+  <!-- 保持body内容不变 -->
+
+  <body>
+    <div class="box">
+      <div class="return">
+        <h5>
+          <a href="./main.html" style="font-size: 20px"
+            >&lt; 返&nbsp;&nbsp;回</a
+          >
+        </h5>
+      </div>
+    </div>
+
+    <!-- 头部的盒子 -->
+    <header>
+      <h1>中国探月工程数据可视化分析平台</h1>
+      <div class="showTime"></div>
+      <script>
+        let t = null;
+        t = setTimeout(time, 1000); //開始运行
+        function time() {
+          clearTimeout(t); //清除定时器
+          dt = new Date();
+          let y = dt.getFullYear();
+          let mt = dt.getMonth() + 1;
+          let day = dt.getDate();
+          let h = dt.getHours(); //获取时
+          let m = dt.getMinutes(); //获取分
+          let s = dt.getSeconds(); //获取秒
+          document.querySelector(".showTime").innerHTML =
+            "当前时间：" +
+            y +
+            "年" +
+            mt +
+            "月" +
+            day +
+            "日" +
+            h +
+            "时" +
+            m +
+            "分" +
+            s +
+            "秒";
+          t = setTimeout(time, 1000); //设定定时器，循环运行
+        }
+      </script>
+    </header>
+
+    <!-- 页面主体部分 -->
+    <div class="parent" id="parent"></div>
+    <div class="scroll-one" id="scroll-one"></div>
+
+    <section id="btnsec" class="mainbox">
+      <div class="column3">
+        <!-- 横向条形图放在左边第第 个 -->
+        <div class="panel2 pie">
+          <h2>中国历次探月费用和任务数量比较</h2>
+          <div id="rank" style="height: 110%"></div>
+          <div class="panel-footer"></div>
+        </div>
+
+        <!-- 饼图放在左边第二个 -->
+        <div class="panel2 pie2">
+          <h2>嫦娥六号月壤矿物质占比</h2>
+          <div id="foil" style="height: 100%"></div>
+        </div>
+      </div>
+
+      <div class="column2">
+        <!-- no模块制作 -->
+        <div class="no">
+          <div class="no-hd">
+            <ul>
+              <li>127</li>
+              <li>8</li>
+            </ul>
+          </div>
+          <div class="no-bd">
+            <ul>
+              <li>世界各国探月总数</li>
+              <li>中国探月工程发射计划</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 月球模块 -->
+        <div class="map">
+
+          <!-- 地图模块 -->
+          <div
+          id="globe3D"
+          style="width: 100%; height: 60vh">
+          </div>
+      
+          <!--切换贴图-->
+          <div class="texture-selector">
+            <label for="texture">选择月球纹理模型:</label>
+            <select id="texture">
+              <option value="./images/月球表面彩色山体阴影.jpg">彩色山体阴影模型</option>
+              <option value="./images/月球表面坡度.jpg">表面坡度模型</option>
+              <option value="./images/月球表面温度.jpg">表面温度模型</option>
+              <option value="./images/月球地质.jpg">地质模型</option>
+              <option value="./images/月球最小亮度温度异常.jpg">温度异常模型
+              </option>
+              <option value="./images/LROC月球灰度.jpg">LROC灰度模型</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- 页面跳转 -->
+        <div class="map3d">
+          <a href="KepuIndex.html">进入【探月知识科普】</a>
+        </div>
+      </div>
+
+      <div class="column3">
+        <!-- 饼图放在右边第二个 -->
+        <div class="panel2 pie">
+          <h2>月球相关影视书籍</h2>
+          <!--<div class="chart">图表</！div>-->
+          <div id="container" style="height: 100%"></div>
+          <div class="panel-footer"></div>
+        </div>
+
+        <!-- 修改后的新闻速达板块 -->
+        <div class="panel2 pie2">
+          <h2>新闻速达</h2>
+          <div class="news-container">
+            <ul id="news-list">
+              <!-- 动态新闻将插入到这里 -->
+            </ul>
+          </div>
+
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              // 从Flask应用程序获取新闻数据的URL
+              const apiUrl = "http://139.224.104.56:180/news";
+
+              fetch(apiUrl)
+                .then((response) => response.json())
+                .then((newsItems) => {
+                  // 获取新闻列表的容器
+                  const newsList = document.getElementById("news-list");
+
+                  // 清空新闻列表
+                  newsList.innerHTML = "";
+
+                  // 动态生成新闻项
+                  let newsHTML = "";
+                  newsItems.forEach((item) => {
+                    newsHTML += `<li><a href="${item.url}" target="_blank">${item.title}</a></li>`;
+                  });
+                  newsList.innerHTML = newsHTML;
+
+                  // 设置新闻列表高度以适应内容
+                  const newsListHeight = newsList.scrollHeight;
+                  newsList.style.height = `${newsListHeight}px`;
+                })
+                .catch((error) => {
+                  console.error("Error fetching news data:", error);
+                });
+
+              // 添加鼠标悬停事件
+              const newsContainer =
+                document.getElementsByClassName("news-container");
+              newsContainer[0].addEventListener("mouseover", function () {
+                document.getElementById("news-list").style.animationPlayState =
+                  "paused";
+              });
+              newsContainer[0].addEventListener("mouseout", function () {
+                document.getElementById("news-list").style.animationPlayState =
+                  "running";
+              });
+            });
+          </script>
+
+          <style>
+            .news-container {
+              width: 365px;
+              height: 300px;
+              overflow: hidden;
+              position: relative;
+              color: white;
+            }
+
+            #news-list {
+              list-style: none;
+              padding: 0;
+              margin: 0;
+              animation: scrollNews 60s linear infinite;
+            }
+
+            #news-list li {
+              padding: 5px 0; /* 修改每条新闻间距 */
+              line-height: 1; /* 修改行间距 */
+              text-align: left; /* 修改文字对齐方式，可改为left、center或right */
+            }
+
+            #news-list a {
+              color: white;
+              text-decoration: none;
+              font-size: 16px; /* 修改文字大小 */
+            }
+
+            #news-list a:hover {
+              text-decoration: underline;
+            }
+
+            @keyframes scrollNews {
+              0% {
+                transform: translateY(-100%);
+              }
+              100% {
+                transform: translateY(0%);
+              }
+            }
+          </style>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
